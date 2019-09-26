@@ -3,7 +3,7 @@ package projeto1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Questionario {
+public class Projeto1 {
 
     public static void main(String[] args) {
 
@@ -29,15 +29,14 @@ public class Questionario {
         System.out.println("Digite start para iniciar.");
         Opcao = LeitorTeclado.nextLine();
         if (("start".equals(Opcao))) {
-            for (int i = 0; i < 1; i++) {
-                Quest Quest1 = new Quest("a");
-                Quest1.Quest.add("Questão 1: ");
+            for (int i = 1; i <=10 ; i++) {
+                Questoes Questao1 = new Questoes();
+                Questao1.Questao.add("Questão 1: ");
+                        
                 
-                Alternativas AlternativaA = new Alternativas();
-                AlternativaA.Alternativa = "A: Teste";
-                System.out.print("Resposta: ");
-                Entrada = LeitorTeclado.nextLine();
-                //Respostas.add(Entrada);
+                
+                
+                
                 if ("a".equals(Entrada)) {
                     ContA = ContA + 1;
                     TotalQuestoes = TotalQuestoes + 1;
