@@ -37,23 +37,7 @@ public class Pesquisa {
     public static void main(String[] args) {
 
         Scanner LeitorTeclado = new Scanner(System.in);
-        
-        String Opcao2;
-        String Opcao3;
-        Integer QtdEnt;
-        String Entrada = null;
-        int ContA = 0;
-        int ContB = 0;
-        int ContC = 0;
-        int ContD = 0;
-        int ContE = 0;
-        int TotalQuestoes = 0;
-        float PercentualA;
-        float PercentualB;
-        float PercentualC;
-        float PercentualD;
-        float PercentualE;
-        
+ 
         Entrevistados(); //Pergunta o Numero de Entrevistados
 /*
         System.out.println("Pesquisa!");
