@@ -19,16 +19,17 @@ public class Pesquisa {
         Opcao = LeitorTeclado.nextLine();
         while(!Opcao.equals("0")) {
             if(Opcao.equals("1")) {
-                // abrir funcao
+                    Questionario();
             }
             else if(Opcao.equals("2")) {
-                // abrir funcao
+                PercentualRespostas();
             }
             else if(Opcao.equals("3")) {
-                // abrir funcao
+                ListarPerguntas();
             }else{
                 System.out.println("Digite uma opção válida!");
             }
+            
             Opcao = LeitorTeclado.nextLine();
         }
     }
@@ -53,7 +54,7 @@ public class Pesquisa {
         float PercentualD;
         float PercentualE;
         
-        Menu(); //Abre o Menu
+        Entrevistados(); //Pergunta o Numero de Entrevistados
 /*
         System.out.println("Pesquisa!");
         System.out.println("Digite o número de entrevistados: ");
@@ -87,5 +88,20 @@ public class Pesquisa {
 
             }
         }*/
+    }
+     public static void Entrevistados() {
+        Questoes.MostraEntr();
+    }
+    
+    public static void Questionario() {
+        Questoes.AlternativasResp();
+    }
+    
+    public static void PercentualRespostas() {
+        Questoes.ResPercentual();
+    }
+    
+    public static void ListarPerguntas() {
+        Questoes.MostrarQuestoes();
     }
 }
