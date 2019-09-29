@@ -18,6 +18,7 @@ public class Pesquisa {
         System.out.println("3 - Listar Peguntas");
         System.out.print("Digite a opção: ");
         opcao = leitorTeclado.nextLine();
+        System.out.println("");
 
         while (!opcao.equals("0")) {
             switch (opcao) {
