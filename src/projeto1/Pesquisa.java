@@ -3,7 +3,7 @@ package projeto1;
 import java.util.Scanner;
 import static projeto1.Questoes.questionario;
 import static projeto1.Questoes.entrevistados;
-import static projeto1.Questoes.mostrarQuestoes;
+import static projeto1.Questoes.listaPerguntas;
 import static projeto1.Questoes.respPercentual;
 
 public class Pesquisa {
@@ -17,10 +17,11 @@ public class Pesquisa {
         System.out.println("1 - Iniciar Questionário");
         System.out.println("2 - Percentual de Respostas");
         System.out.println("3 - Listar Peguntas");
+        System.out.println("4 - Mostrar Gabarito");
         System.out.println("==============================");
         System.out.print("Digite a opção: ");
+        
         opcao = leitorTeclado.nextLine();
-
         while (!opcao.equals("0")) {
             switch (opcao) {
                 case "1":
@@ -30,7 +31,7 @@ public class Pesquisa {
                     respPercentual();
                     break;
                 case "3":
-                    mostrarQuestoes();
+                    listaPerguntas();
                     break;
                 default:
                     System.out.println("Digite uma opção válida!");
