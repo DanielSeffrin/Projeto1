@@ -1,7 +1,7 @@
 package projeto1;
 
-public class Alternativas {
-    
-    public String Alternativa = new String();    
+import java.util.ArrayList;
 
+public class Alternativas {
+    public ArrayList<String> alternativa = new ArrayList<>();
 }

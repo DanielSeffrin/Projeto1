@@ -1,91 +1,44 @@
 package projeto1;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+import static projeto1.Questoes.questionario;
+import static projeto1.Questoes.entrevistados;
+import static projeto1.Questoes.mostrarQuestoes;
+import static projeto1.Questoes.respPercentual;
 
 public class Pesquisa {
-    
-    public static void Menu() { 
-        String Opcao;
-        
+
+    public static void menu() {
+        Scanner leitorTeclado = new Scanner(System.in);
+        String opcao;
         System.out.println("MENU");
         System.out.println("0 - Sair do Sistema");
         System.out.println("1 - Iniciar Questionário");
         System.out.println("2 - Percentual de Respostas");
         System.out.println("3 - Listar Peguntas");
-        System.out.println("Digite a opção: ");
-        Scanner LeitorTeclado = new Scanner(System.in);        
+        System.out.print("Digite a opção: ");
+        opcao = leitorTeclado.nextLine();
 
-        Opcao = LeitorTeclado.nextLine();
-        while(!Opcao.equals("0")) {
-            if(Opcao.equals("1")) {
-                    Questionario();
+        while (!opcao.equals("0")) {
+            switch (opcao) {
+                case "1":
+                    questionario();
+                    break;
+                case "2":
+                    respPercentual();
+                    break;
+                case "3":
+                    mostrarQuestoes();
+                    break;
+                default:
+                    System.out.println("Digite uma opção válida!");
+                    break;
             }
-            else if(Opcao.equals("2")) {
-                PercentualRespostas();
-            }
-            else if(Opcao.equals("3")) {
-                ListarPerguntas();
-            }else{
-                System.out.println("Digite uma opção válida!");
-            }
-            
-            Opcao = LeitorTeclado.nextLine();
+            opcao = leitorTeclado.nextLine();
         }
     }
 
     public static void main(String[] args) {
-
-        Scanner LeitorTeclado = new Scanner(System.in);
- 
-        Entrevistados(); //Pergunta o Numero de Entrevistados
-/*
-        System.out.println("Pesquisa!");
-        System.out.println("Digite o número de entrevistados: ");
-        QtdEnt = LeitorTeclado.nextInt();
-        System.out.println("Digite start para iniciar.");
-        Opcao = LeitorTeclado.nextLine();        
-        if (("start".equals(Opcao))) {
-            for (int i = 1; i <=QtdEnt ; i++) {
-                Questoes Questao1 = new Questoes("Questão 1: ");
-                System.out.println(Questao1);
-                if ("a".equals(Entrada)) {
-                    ContA = ContA + 1;
-                    TotalQuestoes = TotalQuestoes + 1;
-                }
-                if ("b".equals(Entrada)) {
-                    ContB = ContB + 1;
-                    TotalQuestoes = TotalQuestoes + 1;
-                }
-                if ("c".equals(Entrada)) {
-                    ContC = ContC + 1;
-                    TotalQuestoes = TotalQuestoes + 1;
-                }
-                if ("d".equals(Entrada)) {
-                    ContD = ContD + 1;
-                    TotalQuestoes = TotalQuestoes + 1;
-                }
-                if ("e".equals(Entrada)) {
-                    ContE = ContE + 1;
-                    TotalQuestoes = TotalQuestoes + 1;
-                }
-
-            }
-        }*/
-    }
-     public static void Entrevistados() {
-        Questoes.MostraEntr();
-    }
-    
-    public static void Questionario() {
-        Questoes.AlternativasResp();
-    }
-    
-    public static void PercentualRespostas() {
-        Questoes.ResPercentual();
-    }
-    
-    public static void ListarPerguntas() {
-        Questoes.MostrarQuestoes();
+        entrevistados(); //Pergunta o Numero de Entrevistados
     }
 }
