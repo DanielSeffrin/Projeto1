@@ -23,7 +23,7 @@ public class Pesquisa {
         System.out.print("Digite a opção: ");
 
         opcao = leitorTeclado.nextLine();
-        while (!opcao.equals("0")) {
+        while (1 == 1) {
             switch (opcao) {
                 case "sair":
                     System.exit(0);
@@ -40,7 +40,7 @@ public class Pesquisa {
                     listaGabarito();
                     break;
                 default:
-                    System.out.println("Digite uma opção válida!");
+                    System.out.print("Digite uma opção válida: ");
                     break;
             }
             opcao = leitorTeclado.nextLine();
