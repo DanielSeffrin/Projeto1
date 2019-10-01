@@ -30,7 +30,7 @@ public class Questoes {
     public static void questionario() {
         // Iniciar o questionario
         if (qtdEnt == 0) {
-            System.out.println("Número de entrevistados igual a 0");
+            System.out.println("Número de entrevistados igual a 0, impossível responder o questionário.");
             menu();
         } else {
 
